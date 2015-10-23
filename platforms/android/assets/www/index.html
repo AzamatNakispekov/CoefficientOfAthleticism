@@ -7,17 +7,29 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         
-        <title>Hello World</title>
+        <title>CoefficientOfAthleticism</title>
         <script src="js/app1.js"></script>
     </head>
+    <style type="text/css">
+
+    .error {
+
+    color: red;
+
+      }
+     </style>
+
     <body>
     <div class="contener">
     
-    <div class="header"><table><tr><th><img src="img/logo1.png"  width="150" height="100" alt="logo">Welcome<img src="img/logo2.jpg"  width="120" height="100" alt="logo"></th></tr></table></div>
+    <div class="header"><table><tr><th><img src="img/logo1.png"  width="160" height="100" alt="logo">Welcome<img src="img/logo2.jpg"  width="130" height="100" alt="logo"></th></tr></table></div>
+        <br>__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</dr>
     <form role="form">
   <div class="form-put">
     <label >Введите вес штанги в (КГ)</label>
     <input id="Code1" name="Code1" type="text" class="form-control" placeholder="Введите вес штанги" value="" >
+      <p id='err_Code1' class='error'></p>
+
     <label >Введите число повторений</label>
     <input id="Code2" name="Code2" type="text" class="form-control" placeholder="Введите число повторений" value="" >
     <label >Введите  вес спортсмена (КГ)</label>
@@ -25,30 +37,30 @@
           
     <div class="button"> 
        
-<button type="submit" name="submit"  onClick="Count();" >Расчет</button>
+<button   type="button" name="submit"  onClick="put1();" >Расчет</button>
 
-
-        </div>
+ </div>
     <label >Ответ</label>
-    <input type="text" name="Answert" id="send1" size="15">
+    <input    class="form-control" type="text" name="Answert" id="send1" size="15" >
     </div>
         </form>
-    <script type="text/javascript">
-         var a=document.getElementById("Code1").value;
-         var b=document.getElementById("Code2").value;
-         var c=document.getElementById("Code3").value;
-          function Get(a,b,c)
-    {
+    <script >
+        
+         var a =document.getElementById("Code1").value;
+         var b =document.getElementById("Code2").value;
+         var c =document.getElementById("Code3").value;
+        
+         function get(a,b,c){
+         return (a*b)/c; 
+         
+         } 
+         function put1(){
+            var d = get();
           
-        var d=(a+b)/c;
-           
-    }
-    function Count(){
-    var result = GetAndCount();
-    input = document.getElementById('send1'); 
-    send1.value = result;
-    }
-
+             
+            input = document.getElementById('send1'); 
+             send1.value = d;}
+            
     </script>
 
  
